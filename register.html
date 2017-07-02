@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register</title>
+<link rel="stylesheet" type="text/css" href="web.css">
+<style>
+body 
+{
+     background: url(reg.jpg);
+    background-size: cover;
+margin: 0;
+	padding: 0;
+ }
+</style>
+<script type="text/javascript">
+
+function validation(){
+	// Make quick references to our fields
+	var category = document.form1.Category.value;
+	var user = document.form1.Username.value;
+	var pass= document.form1.Password.value;
+        var mail= document.form1.Email.value;
+if(category=="select a category")
+{
+alert("Enter any category");
+}
+if((user==null)||(user==""))
+{
+alert("Enter some Username");
+}
+if((pass==null)||(pass==""))
+{
+alert("Enter some Password");
+}
+if((mail==null)||(mail==""))
+{
+alert("Enter some mail id");
+}
+
+setTimeout(function() 
+{
+window.location = "3.html" ;
+})
+}
+else
+{
+alert("Access Denied");
+}	
+}	
+</script>
+</head>
+<body>
+<div id="header">
+<h2>&nbsp BUZZER</h2>
+</div>
+<br><br>
+<form action="register2.php" name="form1" method="post"   onsubmit="validation()">
+<table id="table1" cellspacing="5px" cellpadding="5%" align="center">
+<tr> 
+<td>
+<div class=form>  
+<h1>Registration</h1>
+<br><br>
+<ul>
+<li>Username:
+  <input type="text" name="Username" value="" style="color:silver;background-color:black">
+  <br><br></li>
+<li>  Password:&nbsp
+  <input type="password" name="Password" value="" style="color:silver;background-color:black">
+  <br><br></li>
+<li>  Category:&nbsp
+    <select name="Category" style="color:silver;background-color:black">
+    <option value="select a category" style="color:silver;background-color:black">select a category</option>
+    <option value="Teacher" style="color:silver;background-color:black">Teacher</option>
+    <option value="Student" style="color:silver;background-color:black">Student</option>
+  </select><br><br></li>
+<li>       Email:&nbsp &nbsp  &nbsp&nbsp
+  <input type="text" name="Email" value="" style="color:silver;background-color:black">
+  <br><br></li>
+<li>  <input id="button" type="submit" value="Register"></li>
+</div>
+</td>
+</tr>
+</table>
+</form>
+<div id="footer">
+COPYRIGHTS &copy BUZZER Inc
+</div>
+</body>
+</html>
+

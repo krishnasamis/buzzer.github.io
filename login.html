@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<link rel="stylesheet" type="text/css" href="web.css">
+<style>
+body 
+{
+     background: url(log2.jpg);
+    background-size: cover;
+ background-repeat:   no-repeat;
+margin: 0;
+	padding: 0;
+   
+ }
+</style>
+<script type="text/javascript">
+
+function validation(){
+	var category = document.form1.Category.value;
+	var user = document.form1.Username.value;
+	var pass= document.form1.Password.value;
+if(category=="select a category")
+{
+alert("Enter any category");
+}
+if((user==null)||(user==""))
+{
+alert("Enter some Username");
+}
+if((pass==null)||(pass==""))
+{
+alert("Enter some Password");
+}
+if(!isNaN(user))
+{
+alert("Please Enter Only Characters");
+document.form1.Username.select();
+return false;
+}
+if ((pass.length < 2) || (pass.length > 15))
+{
+alert("Your Character must be 5 to 15 Character");
+document.form1.Password.select();
+return false;
+}
+}
+</script>
+</head>
+<body>
+
+<div id="header">
+<h2> &nbsp BUZZER   </h2><br>
+<br><br>
+</div>
+<br><br>
+<div id="form">
+<form id="form1" name="form1" method="post"   action="login2.php">
+<table id="table1" cellspacing="5px" cellpadding="5%" align="center">
+<tr> 
+<td> 
+
+<div class="form">
+<h1>Sign in</h1>
+<br><br>
+<ul>
+<li>Category: &nbsp
+    <select name="Category" style="color:silver;background-color:black">
+    <option value="select a category" style="color:silver;background-color:black">select a category</option>
+    <option value="Teacher" style="color:silver;background-color:black">Teacher</option>
+    <option value="Student" style="color:silver;background-color:black">Student</option>
+  </select><br><br></li>
+  <li>Username:
+  <input type="text" name="Username" value="" style="color:silver;background-color:black">
+  <br><br></li>
+  <li>Password:&nbsp
+  <input type="password" name="Password" value="" style="color:silver;background-color:black">
+  <br><br></li>
+  <li><input id="button" type="submit" name="Login" value="Login">
+  &nbsp
+  <input id="button" type="button" name="Register" value="Register" onclick="window.location='register.html';"></li>
+</ul>
+</div>
+
+</td>
+</tr>
+
+</table>
+</form>
+<div id="footer">COPYRIGHTS  &copy BUZZER Inc</div>
+</body>
+</html>
+
